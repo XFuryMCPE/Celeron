@@ -29,7 +29,8 @@ class Main extends PluginBase implements Listener{
             $damage = $event->getDamager();
             if($damage instanceof Player){
                 if($damage->getInventory()->getItemInHand()->getItem() === 367){
-                    $player->sendTip("Celeron activated");
+                    $player->sendTip("You have been harpooned.");
+                    $damage->sendMessage("You hit" . $player->getName();
                 }
             }
         }
