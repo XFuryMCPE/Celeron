@@ -11,16 +11,17 @@ use pocketmine\utils\TextFormat;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\Item;
+use pocketmine\utils\TextFormat as TF;
 
 class Main extends PluginBase implements Listener{
 
     public function onEnable(){
-        $this->getServer()->info("Celeron initiated");
+        $this->getServer()->info(TF::GREEN."Celeron activated");
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
     }
 
     public function onDisable(){
-        $this->getLogger()->info("Celeron disabled");
+        $this->getLogger()->info(TF::RED."Celeron disabled");
     }
 
     public function onHurt(EntityDamageEvent $event){
