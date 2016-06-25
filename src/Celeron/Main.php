@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener{
             if($damage instanceof Player){
                 if($damage->getInventory()->getItemInHand()->getId() === 367){
                     $player->sendTip("You have been harpooned.");
-                    $damage->sendMessage("You hit" . $player->getName();
+                    $damage->sendMessage("You hit" . $player->getName());
                 }
             }
         }
